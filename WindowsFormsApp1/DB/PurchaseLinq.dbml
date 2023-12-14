@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Stock" Class="PurchaseLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=desktop-3e6me6n;Initial Catalog=Stock;Integrated Security=True" SettingsObjectName="WindowsFormsApp1.Properties.Settings" SettingsPropertyName="StockConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.View_1" Member="View_1">
+    <Type Name="View_1">
+      <Column Name="idPurchase" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LotNr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cts" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InrCt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InrTotal" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ct" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DatePurch" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Suppliner" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Commission" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idCurrency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBroker" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBrokerProcent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Broker" Member="Broker">
+    <Type Name="Broker">
+      <Column Name="idBroker" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Broker" Member="Broker1" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Broker_Purchase" Member="Purchase" ThisKey="idBroker" OtherKey="idBroker" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BrokerProcent" Member="BrokerProcent">
+    <Type Name="BrokerProcent">
+      <Column Name="idBrokerProcent" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BrokerProcent" Member="BrokerProcent1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="BrokerProcent_Purchase" Member="Purchase" ThisKey="idBrokerProcent" OtherKey="idBrokerProcent" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Currency" Member="Currency">
+    <Type Name="Currency">
+      <Column Name="idCurrency" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Currency" Member="Currency1" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Currency_Purchase" Member="Purchase" ThisKey="idCurrency" OtherKey="idCurrency" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Days" Member="Days">
+    <Type Name="Days">
+      <Column Name="idDays" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Days" Member="Days1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Days_Purchase" Member="Purchase" ThisKey="idDays" OtherKey="idDays" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Purchase" Member="Purchase">
+    <Type Name="Purchase">
+      <Column Name="idPurchase" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LotNr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cts" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InrCt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InrTotal" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ct" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DatePurch" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Suppliner" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Commission" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idPurchaseStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCurrency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBroker" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBrokerProcent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Broker_Purchase" Member="Broker" ThisKey="idBroker" OtherKey="idBroker" Type="Broker" IsForeignKey="true" />
+      <Association Name="BrokerProcent_Purchase" Member="BrokerProcent" ThisKey="idBrokerProcent" OtherKey="idBrokerProcent" Type="BrokerProcent" IsForeignKey="true" />
+      <Association Name="Currency_Purchase" Member="Currency" ThisKey="idCurrency" OtherKey="idCurrency" Type="Currency" IsForeignKey="true" />
+      <Association Name="Days_Purchase" Member="Days" ThisKey="idDays" OtherKey="idDays" Type="Days" IsForeignKey="true" />
+      <Association Name="PurchaseStatus_Purchase" Member="PurchaseStatus" ThisKey="idPurchaseStatus" OtherKey="idPurchaseStatus" Type="PurchaseStatus" IsForeignKey="true" />
+      <Association Name="Size_Purchase" Member="Size" ThisKey="idSize" OtherKey="idSize" Type="Size" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchaseStatus" Member="PurchaseStatus">
+    <Type Name="PurchaseStatus">
+      <Column Name="idPurchaseStatus" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PurchaseStatus" Member="PurchaseStatus1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PurchaseStatus_Purchase" Member="Purchase" ThisKey="idPurchaseStatus" OtherKey="idPurchaseStatus" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Size" Member="Size">
+    <Type Name="Size">
+      <Column Name="idSize" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Size" Member="Size1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Size_Purchase" Member="Purchase" ThisKey="idSize" OtherKey="idSize" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stock1" Member="Stock1">
+    <Type Name="Stock1">
+      <Column Name="idStock" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LotNr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Shape" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Carats" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ct" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Purity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

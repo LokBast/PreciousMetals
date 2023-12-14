@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.75, 14.5" name="PurchaseLinq">
+  <DataContextMoniker Name="/PurchaseLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7e11859b-f312-4fe1-9e4e-bf4f9e19920d" absoluteBounds="5, 3.125, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/View_1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28579643-dc94-4f09-9483-fe40ebf7adb2" absoluteBounds="5.015, 3.585, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ef3fe8a-4b27-4c8c-9eb7-4d934f38d6a3" absoluteBounds="8.75, 2.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/Broker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7289e4a1-fd49-40e1-a6e0-329588527971" absoluteBounds="8.765, 3.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83e40eee-f459-45e1-b415-b8b9535773b8" absoluteBounds="8.75, 5.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/BrokerProcent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18d38c3b-670d-4392-bcff-b20764ef256f" absoluteBounds="8.765, 5.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc0bf61b-832a-4a8b-ae0a-dd2cd815ca07" absoluteBounds="8.75, 7.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/Currency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11878367-4597-458a-9eaa-d4385f8b9dff" absoluteBounds="8.765, 7.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71a75b0f-6e11-4855-9bf7-fbe300672c5e" absoluteBounds="8.75, 9.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/Days" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67392eed-9f6c-43a0-8c89-7275de4c48f5" absoluteBounds="8.765, 9.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c50e8e4-7859-40de-a442-63e6a19765f1" absoluteBounds="11.5, 1, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/Purchase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="886daa80-d503-4f1b-97a7-6a7a5921f799" absoluteBounds="11.515, 1.46, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c26fd84-546c-4642-8949-32ad57d077a0" absoluteBounds="8.75, 11, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/PurchaseStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e202a7c-ebc8-456c-ab6f-4993a04a0d8e" absoluteBounds="8.765, 11.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b004c12c-d1e1-4d09-8754-d7a0484fe8d3" absoluteBounds="8.75, 13, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/Size" />
+      <nestedChildShapes>
+        <elementListCompartment Id="483862c2-956d-44b6-90d4-1efee3b6d075" absoluteBounds="8.765, 13.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d9c308c-2f94-46dd-8cb0-55fd532790ec" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PurchaseLinqDataContext/Stock1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a8eaf2f-233a-4780-a558-535ce2138ace" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.75 : 3.22199625651042); (11.5 : 3.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PurchaseLinqDataContext/Broker/Broker_Purchase" />
+      <nodes>
+        <classShapeMoniker Id="1ef3fe8a-4b27-4c8c-9eb7-4d934f38d6a3" />
+        <classShapeMoniker Id="4c50e8e4-7859-40de-a442-63e6a19765f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 5.9535551875); (11.6197879166667 : 5.9535551875 : JumpStart); (11.7864545833333 : 5.9535551875 : JumpEnd); (11.8854141666667 : 5.9535551875 : JumpStart); (12.0520808333333 : 5.9535551875 : JumpEnd); (12.1510404166667 : 5.9535551875 : JumpStart); (12.3177070833333 : 5.9535551875 : JumpEnd); (12.5 : 5.9535551875); (12.5 : 5.46311686197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PurchaseLinqDataContext/BrokerProcent/BrokerProcent_Purchase" />
+      <nodes>
+        <classShapeMoniker Id="83e40eee-f459-45e1-b415-b8b9535773b8" />
+        <classShapeMoniker Id="4c50e8e4-7859-40de-a442-63e6a19765f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 7.72199625651042); (11.6197879166667 : 7.72199625651042 : JumpStart); (11.7864545833333 : 7.72199625651042 : JumpEnd); (11.9687475 : 7.72199625651042); (11.9687475 : 5.46311686197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PurchaseLinqDataContext/Currency/Currency_Purchase" />
+      <nodes>
+        <classShapeMoniker Id="fc0bf61b-832a-4a8b-ae0a-dd2cd815ca07" />
+        <classShapeMoniker Id="4c50e8e4-7859-40de-a442-63e6a19765f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 9.72199625651042); (11.6197879166667 : 9.72199625651042 : JumpStart); (11.7864545833333 : 9.72199625651042 : JumpEnd); (12.1510404166667 : 9.72199625651042 : JumpStart); (12.3177070833333 : 9.72199625651042 : JumpEnd); (13.0312525 : 9.72199625651042); (13.0312525 : 5.46311686197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PurchaseLinqDataContext/Days/Days_Purchase" />
+      <nodes>
+        <classShapeMoniker Id="71a75b0f-6e11-4855-9bf7-fbe300672c5e" />
+        <classShapeMoniker Id="4c50e8e4-7859-40de-a442-63e6a19765f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 11.5969962565104); (11.70312125 : 11.5969962565104); (11.70312125 : 5.46311686197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PurchaseLinqDataContext/PurchaseStatus/PurchaseStatus_Purchase" />
+      <nodes>
+        <classShapeMoniker Id="7c26fd84-546c-4642-8949-32ad57d077a0" />
+        <classShapeMoniker Id="4c50e8e4-7859-40de-a442-63e6a19765f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 13.5969962565104); (12.23437375 : 13.5969962565104); (12.23437375 : 5.46311686197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PurchaseLinqDataContext/Size/Size_Purchase" />
+      <nodes>
+        <classShapeMoniker Id="b004c12c-d1e1-4d09-8754-d7a0484fe8d3" />
+        <classShapeMoniker Id="4c50e8e4-7859-40de-a442-63e6a19765f1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
